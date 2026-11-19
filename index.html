@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="VØRAX — Streetwear. Identity. Attitude.">
+  <title>VØRAX — Leave Your Mark</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#"><span>VØRAX</span><i>✦</i></a>
+  <nav><a href="#colecao">COLEÇÃO</a><a href="#sobre">A MARCA</a><a href="#contato">CONTATO</a></nav>
+  <div class="actions"><button id="accountBtn" class="ghost">ENTRAR</button><button id="cartBtn" class="cart">SACOLA <b id="cartCount">0</b></button></div>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-copy"><p class="eyebrow">STREETWEAR / EST. 2026</p><h1>NÃO NASCEMOS<br>PARA <em>SEGUIR.</em></h1>
+      <p class="hero-sub">Vista sua identidade. Deixe sua marca.</p><a class="cta" href="#colecao">EXPLORAR COLEÇÃO <span>↗</span></a>
+    </div>
+    <div class="hero-art"><div class="hero-mark">VØ<br>RAX<span>✦</span></div><div class="vertical">LEAVE YOUR MARK — LEAVE YOUR MARK —</div></div>
+    <div class="hero-bottom"><span>01 / IDENTIDADE</span><span>BLUMENAU — BRASIL</span><span>DROP 001</span></div>
+  </section>
+  <section id="colecao" class="section">
+    <div class="section-head"><div><p class="eyebrow red">DROP 001 — PRIMEIRA COLEÇÃO</p><h2>PEÇAS EM <em>DESTAQUE</em></h2></div><span class="muted">FEITO PARA MARCAR PRESENÇA.</span></div>
+    <div id="products" class="products"><p class="muted">Carregando coleção...</p></div>
+  </section>
+  <section id="sobre" class="manifesto"><p class="eyebrow">NOSSO MANIFESTO</p><h2>YOUR STYLE.<br>YOUR RULES.<br><em>YOUR MARK.</em></h2><p>VØRAX é atitude, expressão e autenticidade. Não é sobre seguir tendências. É sobre criar a sua própria identidade.</p></section>
+  <section class="section community"><div><p class="eyebrow red">FAÇA PARTE</p><h2>MAIS QUE ROUPA.<br><em>UMA IDENTIDADE.</em></h2></div><button class="outline" id="chatBtn">ENTRAR NA COMUNIDADE ↗</button></section>
+</main>
+<footer id="contato"><a class="brand" href="#">VØRAX<i>✦</i></a><span>LEAVE YOUR MARK.</span><a id="whatsLink" href="#" target="_blank" rel="noreferrer">FALE CONOSCO ↗</a><small>© 2026 VØRAX. TODOS OS DIREITOS RESERVADOS.</small></footer>
+
+<div class="modal" id="authModal"><div class="modal-card"><button class="close" data-close>×</button><p class="eyebrow red">ÁREA DO CLIENTE</p><h2 id="authTitle">ENTRAR</h2><form id="authForm"><input id="authEmail" type="email" placeholder="Seu e-mail" required><input id="authPassword" type="password" placeholder="Sua senha (mín. 6 caracteres)" minlength="6" required><button class="cta full" type="submit">CONTINUAR ↗</button></form><button class="text-btn" id="authToggle">Ainda não tem conta? Cadastre-se</button><p id="authMessage" class="form-message"></p></div></div>
+<div class="modal" id="cartModal"><div class="modal-card"><button class="close" data-close>×</button><p class="eyebrow red">SEU PEDIDO</p><h2>SUA SACOLA</h2><div id="cartItems"></div><div class="cart-total"><span>TOTAL</span><b id="cartTotal">R$ 0,00</b></div><button id="checkoutBtn" class="cta full">FINALIZAR PELO WHATSAPP ↗</button></div></div>
+<div class="modal" id="productModal"><div class="modal-card"><button class="close" data-close>×</button><div id="productDetails"></div></div></div>
+<div class="modal" id="adminModal"><div class="modal-card wide"><button class="close" data-close>×</button><p class="eyebrow red">BACK OFFICE</p><h2>PAINEL VØRAX</h2><form id="productForm" class="admin-form"><input id="pName" placeholder="Nome do produto" required><input id="pPrice" type="number" step=".01" min="0" placeholder="Preço (R$)" required><input id="pImage" type="url" placeholder="URL da imagem"><input id="pCategory" placeholder="Categoria (ex.: Camisetas)"><textarea id="pDescription" placeholder="Descrição"></textarea><button class="cta" type="submit">PUBLICAR PRODUTO ↗</button></form><h3>PRODUTOS CADASTRADOS</h3><div id="adminProducts"></div></div></div>
+<div class="modal" id="chatModal"><div class="modal-card"><button class="close" data-close>×</button><p class="eyebrow red">COMUNIDADE VØRAX</p><h2>CHAT</h2><p class="muted">Entre na sua conta para participar.</p><div id="chatMessages" class="chat-messages"></div><form id="chatForm" class="chat-form"><input id="chatInput" placeholder="Escreva uma mensagem..." maxlength="500" required><button class="cta">ENVIAR</button></form></div></div>
+<div class="toast" id="toast"></div>
+<script type="module" src="app.js"></script>
+</body></html>
