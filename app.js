@@ -1,8 +1,8 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
 // 1) Cole aqui a URL e a chave anon/public do seu projeto Supabase.
-const SUPABASE_URL = "COLE_SUA_SUPABASE_URL";
-const SUPABASE_ANON_KEY = "COLE_SUA_CHAVE_ANON";
+const SUPABASE_URL = "https://hrfpkhvcenuvllepefqj.supabase.co/rest/v1/";
+const SUPABASE_ANON_KEY = "sb_publishable_HyF7J_vqcaeZDZ2UhZ-sRA__bu_7gBC";
 const WHATSAPP_NUMBER = "55DDDNUMERO"; // Ex.: 5547999999999 (somente números)
 
 const configured = SUPABASE_URL.startsWith("https://") && !SUPABASE_ANON_KEY.startsWith("COLE_");
